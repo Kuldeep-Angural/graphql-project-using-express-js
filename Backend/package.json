@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "graphql-project-usnig-nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node start",
+    "start": "nodemon App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Graphql Project using nodeJs"
+  },
+  "keywords": [
+    "nothing"
+  ],
+  "author": "Kudeep kumar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
