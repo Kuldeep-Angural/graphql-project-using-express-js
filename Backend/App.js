@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const graphqlHTTP = require('express-graphql').graphqlHTTP;
 const { buildSchema } = require('graphql');
+const mongoose=require('mongoose');
 require('dotenv').config();
 const port=process.env.PORT||8080;
 
@@ -61,6 +62,9 @@ app.use(
   graphiql: true
 })
 );
-   
+mongoose.connect(process.env.MONGO_DATABASE_SRV)
+.then(()=>{
+  app.listen(port, () => console.log("=================> Wait until Project Build Finishes",'\n',"Congratulations Server started Successfully on port:",port));
+}).catch(err=>{console.log(err)});
 
-app.listen(port, () => console.log("=================> Wait until Project Build Finishes",'\n',"Congratulations Server started Successfully on port:",port));
+
