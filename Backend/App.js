@@ -20,13 +20,13 @@ app.use(
 mongoose
   .connect(process.env.MONGO_DATABASE_SRV)
   .then(() => {
+    console.log(
+      "Wait until Project Build Finishes")
     app.listen(port, () =>
       console.log(
-        "=================> Wait until Project Build Finishes",
-        "\n",
         "Congratulations Server started Successfully on port:",
         port,
-        "/n",
+       ", Data base name :",
         process.env.MONGO_DB
       )
     );
