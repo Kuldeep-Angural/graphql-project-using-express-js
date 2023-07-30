@@ -17,7 +17,7 @@ const eventSchema=new Schema({
         type:Date,
         require:true
     },
-    creter:{
+    creator:{
             type:Schema.Types.ObjectId,
             ref:'User',
     }
