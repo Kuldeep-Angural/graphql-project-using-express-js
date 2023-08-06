@@ -12,22 +12,17 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import EventSeatIcon from '@mui/icons-material/EventSeat';
-import InventoryIcon from '@mui/icons-material/Inventory';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import SettingsIcon from '@mui/icons-material/Settings';
-import LogoutIcon from '@mui/icons-material/Logout';
-import { SideListItems, mainListItems, secondaryListItems } from "./SideListItems";
+
+import {
+  SideListItems,
+  mainListItems,
+  secondaryListItems,
+} from "./SideListItems";
 import shadows from "@mui/material/styles/shadows";
 import AuthPage from "../Pages/Auth";
-import { DashBoard } from "../Components/DashBoard";
 
+import { Button, Grid } from "@mui/material";
+import { OnBoardingDesign } from "./DashBoaed.js/OnBoardingDesign";
 
 const drawerWidth = 240;
 
@@ -109,9 +104,9 @@ export default function MiniDrawer() {
   };
 
   return (
-    <Box sx={{ display: "flex"  }}>
+    <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} style={{backgroundColor:"green" }} >
+      <AppBar position="fixed" open={open} style={{ backgroundColor: "green" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -130,7 +125,12 @@ export default function MiniDrawer() {
           </Typography>
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={open} onMouseOver={handleDrawerOpen} onMouseOut={handleDrawerClose}>
+      <Drawer
+        variant="permanent"
+        open={open}
+        onMouseOver={handleDrawerOpen}
+        onMouseOut={handleDrawerClose}
+      >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (
@@ -143,16 +143,139 @@ export default function MiniDrawer() {
         <Divider />
 
         <List>
-        <SideListItems/>
+          <SideListItems />
         </List>
-
       </Drawer>
-      // Body Part Area
+
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-     
         <DrawerHeader />
-        <DashBoard/>
+
+        <Grid
+          container
+          spacing={3}
+          style={{ marginBottom: "3px", marginTop: "3px" }}
+        >
+          <Grid item xs={12} md={4}>
+            <OnBoardingDesign
+              title="This is Title "
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint numquam
+        quia delectus quo vero quod iusto corrupti illum accusamus odit hic ut
+        ab minus eveniet, corporis ullam tempora debitis iure. Repellat,
+        molestias"
+              componentColor="red"
+              onclickButton=""
+              btnTitle=""
+              icon="fa-solid fa-user"
+              
+            />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <OnBoardingDesign
+              title="This is Title "
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint numquam
+        quia delectus quo vero quod iusto corrupti illum accusamus odit hic ut
+        ab minus eveniet, corporis ullam tempora debitis iure. Repellat,
+        molestias"
+              componentColor="red"
+              onclickButton=""
+              btnTitle=""
+            />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <OnBoardingDesign
+              title="This is Title "
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint numquam
+        quia delectus quo vero quod iusto corrupti illum accusamus odit hic ut
+        ab minus eveniet, corporis ullam tempora debitis iure. Repellat,
+        molestias"
+              componentColor="red"
+              onclickButton=""
+              btnTitle=""
+            />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <OnBoardingDesign
+              title="This is Title "
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint numquam
+        quia delectus quo vero quod iusto corrupti illum accusamus odit hic ut
+        ab minus eveniet, corporis ullam tempora debitis iure. Repellat,
+        molestiast"
+              componentColor="red"
+              onclickButton=""
+              btnTitle=""
+            />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <OnBoardingDesign
+              title="This is Title "
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint numquam
+        quia delectus quo vero quod iusto corrupti illum accusamus odit hic ut
+        ab minus eveniet, corporis ullam tempora debitis iure. Repellat,
+        molestias"
+              componentColor="red"
+              onclickButton=""
+              btnTitle=""
+            />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <OnBoardingDesign
+              title="This is Title "
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint numquam
+        quia delectus quo vero quod iusto corrupti illum accusamus odit hic ut
+        ab minus eveniet, corporis ullam tempora debitis iure. Repellat,
+        molestias"
+              componentColor="red"
+              onclickButton=""
+              btnTitle=""
+            />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <OnBoardingDesign
+              title="This is Title "
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint numquam
+        quia delectus quo vero quod iusto corrupti illum accusamus odit hic ut
+        ab minus eveniet, corporis ullam tempora debitis iure. Repellat,
+        molestiast"
+              componentColor="red"
+              onclickButton=""
+              btnTitle=""
+            />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <OnBoardingDesign
+              title="This is Title "
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint numquam
+        quia delectus quo vero quod iusto corrupti illum accusamus odit hic ut
+        ab minus eveniet, corporis ullam tempora debitis iure. Repellat,
+        molestiast"
+              componentColor="red"
+              onclickButton=""
+              btnTitle=""
+            />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <OnBoardingDesign
+              title="This is Title "
+              text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint numquam
+        quia delectus quo vero quod iusto corrupti illum accusamus odit hic ut
+        ab minus eveniet, corporis ullam tempora debitis iure. Repellat,
+        molestiast"
+              componentColor="red"
+              onclickButton=""
+              btnTitle=""
+            />
+          </Grid>
+        </Grid>
       </Box>
+      <Box></Box>
     </Box>
   );
 }

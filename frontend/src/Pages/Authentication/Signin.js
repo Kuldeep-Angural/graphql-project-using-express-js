@@ -39,16 +39,18 @@ const defaultTheme = createTheme();
 
 export default function SignIn() {
   const navigate = useNavigate();
+  const [warning,setWarning]=React.useState("");
   const [data, setData] = React.useState("");
   const handelChange = (event, props) => {
     setData({ ...data, [props]: event.target.value });
   };
-
+  const email = data.email;
+    
+    const password = data.password;
   const handleSubmit = (event) => {
     event.preventDefault();
-    const email = data.email;
-    const password = data.password;
-    console.log(email, password);
+  
+    
     const request = {
       query: `
         query {
@@ -70,16 +72,20 @@ export default function SignIn() {
     })
       .then((res) => {
         if (res.status !== 200 && res.status !== 201) {
+          setWarning("Id and Password Not Found")
           throw new Error("Failed!");
         }
         return res.json();
       })
       .then((resData) => {
         setCurrentUser(resData.data.login);
+
         navigate("/home");
       })
       .catch((err) => {
         console.log(err);
+        setWarning("Invalid credentials");
+        
       });
   };
 
@@ -107,6 +113,7 @@ export default function SignIn() {
             noValidate
             sx={{ mt: 1 }}
           >
+          <p className="text-center ">{warning}</p>
             <TextField
               margin="normal"
               required
