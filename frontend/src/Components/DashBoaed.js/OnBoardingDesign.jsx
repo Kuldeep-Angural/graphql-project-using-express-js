@@ -75,7 +75,7 @@ export const OnBoardingDesign = (props) => {
                 lineHeight: "30px",
                 boxShadow: "none",
               }}
-              // title={btnTitle}
+               title={props.btnTitle}
               // onClick={onclickButton}
             ></Fab>
           </Grid>
